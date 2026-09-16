@@ -2,7 +2,7 @@
 // MindPredict AI — frontend logic
 // ============================================================
 
-const API_BASE_URL = "";
+const API_BASE_URL = "https://mind-predict-ai-git-main-mind-predict-ai.vercel.app";
 const PREDICT_ENDPOINT = `${API_BASE_URL}/predict`;
 
 /* ---------------- Navbar: scroll shadow + mobile menu ---------------- */
