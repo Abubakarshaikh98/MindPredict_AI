@@ -2,7 +2,7 @@
 // MindPredict AI — frontend logic
 // ============================================================
 
-const API_BASE_URL = "http://127.0.0.1:2200";
+const API_BASE_URL = "";
 const PREDICT_ENDPOINT = `${API_BASE_URL}/predict`;
 
 /* ---------------- Navbar: scroll shadow + mobile menu ---------------- */
