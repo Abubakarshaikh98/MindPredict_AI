@@ -2,7 +2,7 @@
 // MindPredict AI — frontend logic
 // ============================================================
 
-const API_BASE_URL = "http://127.0.0.1:2200";
+const API_BASE_URL = "https://mind-predict-ai.vercel.app"; // Change this to your deployed backend URL if needed
 const PREDICT_ENDPOINT = `${API_BASE_URL}/predict`;
 
 // Maximum possible value of the model's score. Change this if your dataset's
