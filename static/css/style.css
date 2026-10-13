@@ -2,30 +2,30 @@
    MindPredict AI — Design tokens
    ========================================================= */
 :root{
-  --ink: #0E1E2B;
-  --ink-soft: #4B5D6B;
-  --ink-faint: #7C8B98;
+  --ink: #101A2C;
+  --ink-soft: #53627A;
+  --ink-faint: #8996AC;
 
-  --bg: #F6F9FB;
+  --bg: #F5F7FC;
   --surface: #FFFFFF;
-  --surface-tint: #F0F5F8;
-  --border: #E3EAF0;
+  --surface-tint: #EEF2FA;
+  --border: #E1E7F2;
 
-  --blue: #2A6FDB;
-  --blue-deep: #1E4FA8;
-  --teal: #12A594;
-  --teal-deep: #0C7C70;
-  --grad: linear-gradient(120deg, var(--blue) 0%, var(--teal) 100%);
-  --grad-soft: linear-gradient(135deg, rgba(42,111,219,0.10), rgba(18,165,148,0.10));
+  --blue: #3654D6;
+  --blue-deep: #22378F;
+  --teal: #0FA394;
+  --teal-deep: #0A7A6D;
+  --grad: linear-gradient(115deg, #3654D6 0%, #2C7FC2 55%, #0FA394 100%);
+  --grad-soft: linear-gradient(135deg, rgba(54,84,214,0.08), rgba(15,163,148,0.10));
 
-  --danger: #D8536B;
+  --danger: #D24761;
 
   --radius-lg: 22px;
   --radius-md: 14px;
   --radius-sm: 9px;
 
-  --shadow-card: 0 1px 2px rgba(14,30,43,0.04), 0 12px 32px -16px rgba(14,30,43,0.16);
-  --shadow-btn: 0 8px 20px -8px rgba(42,111,219,0.45);
+  --shadow-card: 0 1px 2px rgba(16,26,44,0.04), 0 14px 34px -18px rgba(16,26,44,0.20);
+  --shadow-btn: 0 10px 22px -9px rgba(54,84,214,0.5);
 
   --font-display: "Fraunces", ui-serif, Georgia, serif;
   --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -351,13 +351,7 @@ button{ font-family: inherit; }
 .assessment{
   padding: 100px 0;
   position: relative;
-}
-.assessment::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--grad-soft);
-  z-index: -1;
+  background: var(--surface-tint);
 }
 
 .section__head{ text-align: center; margin-left: auto; margin-right: auto; text-align: center; }
@@ -539,7 +533,6 @@ button{ font-family: inherit; }
 .gauge__value{
   fill: none;
   stroke: url(#gaugeGrad);
-  stroke: var(--teal);
   stroke-width: 14;
   stroke-linecap: round;
   stroke-dasharray: 578;
@@ -566,6 +559,23 @@ button{ font-family: inherit; }
   color: var(--ink-faint);
   font-weight: 700;
   margin-top: 4px;
+}
+
+.result-card__band{
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 7px 18px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.result-card__band--good{ background: #E3F6F2; color: #0A7A6D; }
+.result-card__band--moderate{ background: #FFF3DC; color: #9A6200; }
+.result-card__band--low{ background: #FCE8EC; color: #B02E4A; }
+.result-card__bandnote{
+  font-size: 12px;
+  color: var(--ink-faint);
+  margin-bottom: 20px;
 }
 
 .result-card__msg{

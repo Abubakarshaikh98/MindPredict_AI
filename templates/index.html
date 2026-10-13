@@ -21,15 +21,15 @@
       <span class="nav__logo-mark" aria-hidden="true">
         <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
           <circle cx="13" cy="13" r="12" stroke="url(#navGrad)" stroke-width="1.6"/>
-          <circle cx="13" cy="7.5" r="1.6" fill="#2A6FDB"/>
-          <circle cx="7.5" cy="15" r="1.6" fill="#12A594"/>
-          <circle cx="18.5" cy="15" r="1.6" fill="#12A594"/>
-          <circle cx="13" cy="19.5" r="1.6" fill="#2A6FDB"/>
-          <path d="M13 7.5L7.5 15M13 7.5L18.5 15M7.5 15L13 19.5M18.5 15L13 19.5" stroke="#8FB7EA" stroke-width="1.1"/>
+          <circle cx="13" cy="7.5" r="1.6" fill="#3654D6"/>
+          <circle cx="7.5" cy="15" r="1.6" fill="#0FA394"/>
+          <circle cx="18.5" cy="15" r="1.6" fill="#0FA394"/>
+          <circle cx="13" cy="19.5" r="1.6" fill="#3654D6"/>
+          <path d="M13 7.5L7.5 15M13 7.5L18.5 15M7.5 15L13 19.5M18.5 15L13 19.5" stroke="#8FA4E8" stroke-width="1.1"/>
           <defs>
             <linearGradient id="navGrad" x1="0" y1="0" x2="26" y2="26">
-              <stop stop-color="#2A6FDB"/>
-              <stop offset="1" stop-color="#12A594"/>
+              <stop stop-color="#3654D6"/>
+              <stop offset="1" stop-color="#0FA394"/>
             </linearGradient>
           </defs>
         </svg>
@@ -82,20 +82,20 @@
         <svg class="hero__svg" viewBox="0 0 560 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract illustration of a neural network overlaid on a human mind silhouette">
           <defs>
             <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#2A6FDB" stop-opacity="0.18"/>
-              <stop offset="100%" stop-color="#2A6FDB" stop-opacity="0"/>
+              <stop offset="0%" stop-color="#3654D6" stop-opacity="0.18"/>
+              <stop offset="100%" stop-color="#3654D6" stop-opacity="0"/>
             </radialGradient>
             <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#12A594" stop-opacity="0.20"/>
-              <stop offset="100%" stop-color="#12A594" stop-opacity="0"/>
+              <stop offset="0%" stop-color="#0FA394" stop-opacity="0.20"/>
+              <stop offset="100%" stop-color="#0FA394" stop-opacity="0"/>
             </radialGradient>
             <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#2A6FDB"/>
-              <stop offset="100%" stop-color="#12A594"/>
+              <stop offset="0%" stop-color="#3654D6"/>
+              <stop offset="100%" stop-color="#0FA394"/>
             </linearGradient>
             <linearGradient id="headStroke" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#2A6FDB"/>
-              <stop offset="100%" stop-color="#12A594"/>
+              <stop offset="0%" stop-color="#3654D6"/>
+              <stop offset="100%" stop-color="#0FA394"/>
             </linearGradient>
           </defs>
 
@@ -123,18 +123,18 @@
             <line x1="270" y1="300" x2="310" y2="320"/>
             <line x1="350" y1="290" x2="310" y2="320"/>
           </g>
-          <g class="neural-nodes" fill="#2A6FDB">
+          <g class="neural-nodes" fill="#3654D6">
             <circle cx="200" cy="230" r="4.5"/>
-            <circle cx="245" cy="200" r="3.5" fill="#12A594"/>
-            <circle cx="235" cy="265" r="3.5" fill="#12A594"/>
+            <circle cx="245" cy="200" r="3.5" fill="#0FA394"/>
+            <circle cx="235" cy="265" r="3.5" fill="#0FA394"/>
             <circle cx="290" cy="185" r="4" />
-            <circle cx="288" cy="230" r="5" fill="#12A594"/>
+            <circle cx="288" cy="230" r="5" fill="#0FA394"/>
             <circle cx="330" cy="205" r="4"/>
-            <circle cx="322" cy="165" r="3" fill="#12A594"/>
+            <circle cx="322" cy="165" r="3" fill="#0FA394"/>
             <circle cx="325" cy="255" r="4"/>
-            <circle cx="270" cy="300" r="4" fill="#12A594"/>
+            <circle cx="270" cy="300" r="4" fill="#0FA394"/>
             <circle cx="350" cy="290" r="3.5"/>
-            <circle cx="310" cy="320" r="4" fill="#12A594"/>
+            <circle cx="310" cy="320" r="4" fill="#0FA394"/>
           </g>
 
           <!-- floating data chips -->
@@ -153,7 +153,7 @@
           <g class="floaty floaty--c">
             <rect x="386" y="120" width="118" height="70" rx="14" fill="#FFFFFF" stroke="#E3EAF0"/>
             <text x="400" y="140" font-family="Manrope, sans-serif" font-size="10" fill="#6B7C8C">Predicted score</text>
-            <text x="400" y="162" font-family="Fraunces, serif" font-size="22" font-weight="600" fill="#12A594">78</text>
+            <text x="400" y="162" font-family="Fraunces, serif" font-size="22" font-weight="600" fill="#0FA394">78</text>
             <path d="M400 172h96" stroke="#EEF2F5" stroke-width="1"/>
             <path d="M400 172l14-10 12 5 16-14 14 6 16-9 24 12" stroke="url(#lineGrad)" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           </g>
@@ -322,14 +322,23 @@
 
           <div class="gauge" id="gauge">
             <svg viewBox="0 0 220 220" class="gauge__svg">
+              <defs>
+                <linearGradient id="gaugeGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#3654D6"/>
+                  <stop offset="100%" stop-color="#0FA394"/>
+                </linearGradient>
+              </defs>
               <circle cx="110" cy="110" r="92" class="gauge__track"/>
               <circle cx="110" cy="110" r="92" class="gauge__value" id="gaugeCircle"/>
             </svg>
             <div class="gauge__center">
               <span class="gauge__number" id="scoreNumber">0</span>
-              <span class="gauge__max">/ 100</span>
+              <span class="gauge__max" id="scoreMax">/ 10</span>
             </div>
           </div>
+
+          <p class="result-card__band" id="scoreBand"></p>
+          <p class="result-card__bandnote">Score band is a simple guide based on the score range. It is not a clinical assessment.</p>
 
           <p class="result-card__msg">Your prediction has been generated successfully.</p>
           <button type="button" class="btn btn--ghost" id="resultAgain">Take assessment again</button>

@@ -2,8 +2,26 @@
 // MindPredict AI — frontend logic
 // ============================================================
 
-const API_BASE_URL = "https://mind-predict-ai.vercel.app";
+const API_BASE_URL = "http://127.0.0.1:2200";
 const PREDICT_ENDPOINT = `${API_BASE_URL}/predict`;
+
+// Maximum possible value of the model's score. Change this if your dataset's
+// mental health score uses a different scale (e.g. 10 or 100).
+const SCORE_MAX = 10;
+
+// Simple score bands, as a fraction of SCORE_MAX. ASSUMES a higher score means
+// better mental health. If your dataset works the other way round, flip the
+// order of these bands. Adjust the thresholds freely.
+const SCORE_BANDS = [
+  { min: 0.7, key: "good",     label: "Good" },
+  { min: 0.4, key: "moderate", label: "Moderate" },
+  { min: 0,   key: "low",      label: "Low" },
+];
+
+function getScoreBand(score) {
+  const ratio = Math.max(0, Math.min(SCORE_MAX, Number(score))) / SCORE_MAX;
+  return SCORE_BANDS.find((b) => ratio >= b.min) || SCORE_BANDS[SCORE_BANDS.length - 1];
+}
 
 /* ---------------- Navbar: scroll shadow + mobile menu ---------------- */
 const nav = document.getElementById("nav");
@@ -165,8 +183,14 @@ function showResult(score) {
   resultCard.hidden = false;
   assessLayout?.classList.add("assess-layout--split");
 
-  const clamped = Math.max(0, Math.min(100, Number(score)));
-  const offset = GAUGE_CIRCUMFERENCE - (clamped / 100) * GAUGE_CIRCUMFERENCE;
+  const clamped = Math.max(0, Math.min(SCORE_MAX, Number(score)));
+  const offset = GAUGE_CIRCUMFERENCE - (clamped / SCORE_MAX) * GAUGE_CIRCUMFERENCE;
+  document.getElementById("scoreMax").textContent = `/ ${SCORE_MAX}`;
+
+  const band = getScoreBand(score);
+  const bandEl = document.getElementById("scoreBand");
+  bandEl.textContent = band.label;
+  bandEl.className = `result-card__band result-card__band--${band.key}`;
 
   // Animate the number count-up.
   const duration = 900;
